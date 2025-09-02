@@ -8,46 +8,59 @@ import FriendsIcon from "../../assets/header/friends.svg?react";
 
 import ProfilePic from "../../assets/sanji.jpg";
 
+import styles from "./Header.module.scss";
+
 export function Header() {
   return (
-    <header id="header">
+    <header className={styles.header}>
       <SpotifyIcon />
 
-      <nav>
-        <button>
+      <nav className={styles.navBar}>
+        <button type="button" className={styles.homeBtn}>
           <HomeIcon />
         </button>
 
-        <div>
-          <SearchIcon />
+        <div className={styles.optionsContainer}>
+          <button type="button" className={styles.searchBtn}>
+            <SearchIcon />
+          </button>
 
-          <input type="text" />
+          <input type="text" className={styles.searchInput} />
 
-          <div>
-            <div className="divider" />
-            <BrowseIcon />
+          <div className={styles.browseContainer}>
+            <div className={styles.divider} />
+
+            <button type="button" className={styles.browseBtn}>
+              <BrowseIcon />
+            </button>
           </div>
         </div>
       </nav>
 
-      <div>
-        <button>Explore Premium</button>
+      <div className={styles.otherOptionsContainer}>
+        <button type="button" className={styles.premiumBtn}>
+          Explore Premium
+        </button>
 
-        <button>
+        <button type="button" className={styles.downloadBtn}>
           <DownloadIcon />
           Install App
         </button>
 
-        <button>
+        <button type="button" className={styles.notificationBtn}>
           <BellIcon />
         </button>
 
-        <button>
+        <button type="button" className={styles.friendsBtn}>
           <FriendsIcon />
         </button>
 
-        <button>
-          <img src={ProfilePic} alt="profile picture" />
+        <button type="button" className={styles.profileBtn}>
+          <img
+            src={ProfilePic}
+            alt="profile picture"
+            className={styles.profilePic}
+          />
         </button>
       </div>
     </header>
