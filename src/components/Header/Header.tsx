@@ -13,27 +13,35 @@ import styles from "./Header.module.scss";
 export function Header() {
   return (
     <header className={styles.header}>
-      <SpotifyIcon />
+      <a
+        href="https://open.spotify.com/"
+        className={styles.spotifyLink}
+        tabIndex={-1}
+      >
+        <SpotifyIcon />
+      </a>
+
+      <button type="button" className={styles.homeBtn}>
+        <HomeIcon />
+      </button>
 
       <nav className={styles.navBar}>
-        <button type="button" className={styles.homeBtn}>
-          <HomeIcon />
-        </button>
-
         <div className={styles.optionsContainer}>
-          <button type="button" className={styles.searchBtn}>
+          <button type="button" className={styles.searchBtn} tabIndex={-1}>
             <SearchIcon />
           </button>
 
-          <input type="text" className={styles.searchInput} />
+          <input
+            type="text"
+            className={styles.searchInput}
+            placeholder="What do you want to play?"
+          />
 
-          <div className={styles.browseContainer}>
-            <div className={styles.divider} />
+          <div className={styles.divider} />
 
-            <button type="button" className={styles.browseBtn}>
-              <BrowseIcon />
-            </button>
-          </div>
+          <button type="button" className={styles.browseBtn}>
+            <BrowseIcon />
+          </button>
         </div>
       </nav>
 

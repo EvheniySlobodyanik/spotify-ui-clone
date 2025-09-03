@@ -2,6 +2,7 @@ $primary-bg-color: #292929;
 $primary-text-color: #fefefe;
 $black-text-color: #000;
 $divider-color: #fff;
+$spotify-icon-color: #b3b3b3;
 
 .homeBtn,
 .searchBtn,
@@ -18,6 +19,9 @@ $divider-color: #fff;
   cursor: pointer;
   background: transparent;
   border: none;
+
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
 }
 
 .header {
@@ -26,7 +30,13 @@ $divider-color: #fff;
   justify-content: space-between;
   align-self: stretch;
 
-  padding: 0.5rem 1rem;
+  padding: 0.66rem 1.5rem 0.66rem 1rem;
+}
+
+.spotifyLink {
+  cursor: pointer;
+
+  padding: 0.5rem;
 }
 
 .homeBtn {
@@ -47,7 +57,8 @@ $divider-color: #fff;
 
 .searchBtn,
 .browseBtn {
-  color: $primary-text-color;
+  color: #b3b3b3;
+  background: transparent;
 }
 
 .optionsContainer {
@@ -57,7 +68,10 @@ $divider-color: #fff;
   align-self: stretch;
 
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  flex: 1;
+  max-width: 40rem;
+  min-width: 20rem;
 }
 
 .homeBtn,
@@ -67,20 +81,24 @@ $divider-color: #fff;
   border-radius: 60px;
 }
 
-.browseContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  caret-color: $divider-color;
+  color: $primary-text-color;
 
-  gap: 0.5rem;
+  flex: 1;
+  padding: 0 0.5rem;
+
+  font-size: 1rem;
 }
 
 .divider {
-  align-self: stretch;
-  color: $divider-color;
+  background-color: rgba(255, 255, 255, 0.2);
 
-  width: 2px;
+  width: 1px;
+  align-self: stretch;
 }
 
 .otherOptionsContainer {
@@ -103,20 +121,21 @@ $divider-color: #fff;
 }
 
 .downloadBtn {
-  color: $primary-text-color;
+  color: $spotify-icon-color;
 
+  border-radius: 60px;
   padding: 0.5rem 1rem;
   gap: 0.5rem;
 }
 
 .notificationBtn {
-  color: $primary-text-color;
+  color: $spotify-icon-color;
 
   padding: 0.5rem;
 }
 
 .friendsBtn {
-  color: $primary-text-color;
+  color: $spotify-icon-color;
 
   padding: 0.5rem;
 }
@@ -133,4 +152,27 @@ $divider-color: #fff;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+}
+
+.homeBtn:hover,
+.premiumBtn:hover,
+.downloadBtn:hover,
+.notificationBtn:hover,
+.friendsBtn:hover,
+.profileBtn:hover {
+  transform: scale(1.05);
+}
+
+.optionsContainer:hover {
+  background: $primary-bg-color;
+}
+
+.homeBtn:focus,
+.premiumBtn:focus,
+.downloadBtn:focus,
+.notificationBtn:focus,
+.friendsBtn:focus,
+.profileBtn:focus {
+  outline: 2px solid $primary-text-color;
+  outline-offset: 2px;
 }
