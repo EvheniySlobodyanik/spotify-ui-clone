@@ -1,0 +1,14 @@
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.mainWrapper > :first-child {
+  flex: 0 0 30%;
+}
+
+.mainWrapper > :last-child {
+  flex: 1;
+}
