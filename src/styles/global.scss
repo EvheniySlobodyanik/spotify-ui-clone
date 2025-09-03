@@ -6,7 +6,7 @@
   --color-text-muted: #b3b3b3;
   --color-accent: #1db954;
 
-  --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-main: Helvetica, Arial, sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -36,6 +36,11 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+button {
+  all: unset;
+  cursor: pointer;
 }
 
 .card {

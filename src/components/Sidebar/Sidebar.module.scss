@@ -1,3 +1,98 @@
-$primary-bg-color: #333333;
-$primary-button-color: #4d4d4d;
+$primary-bg-color: #121212;
+$primary-button-color: #2a2a2a;
+$primary-article-color: #242424;
 $primary-text-color: #fff;
+$black-text-color: #000;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+
+  background: $primary-bg-color;
+  color: $primary-text-color;
+
+  gap: 1.5rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
+  height: 75vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 1rem;
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $primary-article-color;
+  color: $primary-text-color;
+  border: none;
+
+  border-radius: 60px;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+
+  font-size: 0.8rem;
+
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.playlistArticle,
+.podcastsArticle {
+  display: flex;
+  flex-direction: column;
+
+  background: $primary-article-color;
+
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.playlistHeading,
+.podcastsHeading {
+  font-size: 1rem;
+}
+
+.playlistPara,
+.podcastsPara {
+  font-size: 0.9rem;
+}
+
+.playlistBtn,
+.podcastsBtn {
+  text-align: center;
+
+  background: $primary-text-color;
+  color: $black-text-color;
+
+  max-width: 30%;
+  padding: 0.5rem;
+  border-radius: 60px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.playlistBtn:hover,
+.podcastsBtn:hover {
+  transform: scale(1.05);
+}
+
+.createBtn:hover {
+  background: $primary-button-color;
+}
