@@ -1,6 +1,6 @@
-import InstagramIcon from "../../assets/main/instagram.svg?react";
-import TwitterIcon from "../../assets/main/twitter.svg?react";
-import FacebookIcon from "../../assets/main/facebook.svg?react";
+import InstagramIcon from "../../assets/main/social/instagram.svg?react";
+import TwitterIcon from "../../assets/main/social/twitter.svg?react";
+import FacebookIcon from "../../assets/main/social/facebook.svg?react";
 
 import styles from "./Main.module.scss";
 
