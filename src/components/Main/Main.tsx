@@ -1,3 +1,7 @@
+import InstagramIcon from "../../assets/main/instagram.svg?react";
+import TwitterIcon from "../../assets/main/twitter.svg?react";
+import FacebookIcon from "../../assets/main/facebook.svg?react";
+
 import styles from "./Main.module.scss";
 
 export function Main() {
@@ -60,24 +64,36 @@ export function Main() {
 
         <ul className={styles.list}></ul>
 
-        <address className={styles.socialLinks}></address>
+        <address className={styles.socialLinksContainer}>
+          <a className={styles.socialLink}>
+            <InstagramIcon />
+          </a>
+
+          <a className={styles.socialLink}>
+            <TwitterIcon />
+          </a>
+
+          <a className={styles.socialLink}>
+            <FacebookIcon />
+          </a>
+        </address>
       </div>
 
       <div className={styles.horizontalDivider} />
 
       <div className={styles.rightsContainer}>
-        <address className={styles.documentsLinks}>
-          <a></a>
+        <address className={styles.documentsLinksContainer}>
+          <a className={styles.documentLink}></a>
 
-          <a></a>
+          <a className={styles.documentLink}></a>
 
-          <a></a>
+          <a className={styles.documentLink}></a>
 
-          <a></a>
+          <a className={styles.documentLink}></a>
 
-          <a></a>
+          <a className={styles.documentLink}></a>
 
-          <a></a>
+          <a className={styles.documentLink}></a>
         </address>
 
         <p className={styles.copyrightLogo}>© 2025 Spotify AB</p>
