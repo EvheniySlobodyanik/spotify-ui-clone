@@ -4,6 +4,29 @@ import FacebookIcon from "../../assets/main/social/facebook.svg?react";
 
 import styles from "./Main.module.scss";
 
+const songCovers = [
+  { src: "../../assets/main//covers/cixgo.jpg", alt: "cixgo hot album" },
+  { src: "../../assets/main//covers/clasic.jpg", alt: "clasic hot album" },
+  { src: "../../assets/main//covers/cover.jpg", alt: "cover hot album" },
+  { src: "../../assets/main//covers/dj-pyro.jpg", alt: "dj-pyro hot album" },
+  { src: "../../assets/main//covers/eyes-on-you.jpg", alt: "eyes hot album" },
+  { src: "../../assets/main//covers/lil-baby.jpg", alt: "lil-nigga hot album" },
+  {
+    src: "../../assets/main//covers/ryan-jones.jpg",
+    alt: "ryan-jones hot album",
+  },
+  { src: "../../assets/main//covers/see-you.jpg", alt: "see hot album" },
+  { src: "../../assets/main//covers/vintage.jpg", alt: "vintage hot album" },
+  { src: "../../assets/main//covers/white.jpg", alt: "white boy hot album" },
+];
+
+const headings = [
+  "Recommended for you",
+  "Featured charts",
+  "Episodes you may like",
+  "Shows to try",
+];
+
 export function Main() {
   return (
     <main className={styles.main}>
@@ -18,38 +41,6 @@ export function Main() {
 
         <button type="button" className={styles.podcastsBtn}>
           Podcasts
-        </button>
-      </div>
-
-      <div className={styles.recommendationsContainer}>
-        <h1 className={styles.heading}>Recommended for you</h1>
-
-        <button type="button" className={styles.showBtn}>
-          Show all
-        </button>
-      </div>
-
-      <div className={styles.chartsContainer}>
-        <h1 className={styles.heading}>Featured charts</h1>
-
-        <button type="button" className={styles.showBtn}>
-          Show all
-        </button>
-      </div>
-
-      <div className={styles.episodesContainer}>
-        <h1 className={styles.heading}>Episodes you might like</h1>
-
-        <button type="button" className={styles.showBtn}>
-          Show all
-        </button>
-      </div>
-
-      <div className={styles.showsContainer}>
-        <h1 className={styles.heading}>Shows to try</h1>
-
-        <button type="button" className={styles.showBtn}>
-          Show all
         </button>
       </div>
 
