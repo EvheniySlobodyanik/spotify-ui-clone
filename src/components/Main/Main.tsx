@@ -5,19 +5,19 @@ import FacebookIcon from "../../assets/main/social/facebook.svg?react";
 import styles from "./Main.module.scss";
 
 const songCovers = [
-  { src: "../../assets/main//covers/cixgo.jpg", alt: "cixgo hot album" },
-  { src: "../../assets/main//covers/clasic.jpg", alt: "clasic hot album" },
-  { src: "../../assets/main//covers/cover.jpg", alt: "cover hot album" },
-  { src: "../../assets/main//covers/dj-pyro.jpg", alt: "dj-pyro hot album" },
-  { src: "../../assets/main//covers/eyes-on-you.jpg", alt: "eyes hot album" },
-  { src: "../../assets/main//covers/lil-baby.jpg", alt: "lil-nigga hot album" },
+  { src: "../../assets/main/covers/cixgo.jpg", alt: "cixgo hot album" },
+  { src: "../../assets/main/covers/clasic.jpg", alt: "clasic hot album" },
+  { src: "../../assets/main/covers/cover.jpg", alt: "cover hot album" },
+  { src: "../../assets/main/covers/dj-pyro.jpg", alt: "dj-pyro hot album" },
+  { src: "../../assets/main/covers/eyes-on-you.jpg", alt: "eyes hot album" },
+  { src: "../../assets/main/covers/lil-baby.jpg", alt: "lil-nigga hot album" },
   {
-    src: "../../assets/main//covers/ryan-jones.jpg",
+    src: "../../assets/main/covers/ryan-jones.jpg",
     alt: "ryan-jones hot album",
   },
-  { src: "../../assets/main//covers/see-you.jpg", alt: "see hot album" },
-  { src: "../../assets/main//covers/vintage.jpg", alt: "vintage hot album" },
-  { src: "../../assets/main//covers/white.jpg", alt: "white boy hot album" },
+  { src: "../../assets/main/covers/see-you.jpg", alt: "see hot album" },
+  { src: "../../assets/main/covers/vintage.jpg", alt: "vintage hot album" },
+  { src: "../../assets/main/covers/white.jpg", alt: "white boy hot album" },
 ];
 
 const headings = [

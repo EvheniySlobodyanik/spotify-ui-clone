@@ -1,0 +1,72 @@
+$primary-bg-color: #121212;
+$primary-button-color: #2a2a2a;
+$primary-article-color: #242424;
+$primary-text-color: #fff;
+$black-text-color: #000;
+$spotify-color: #b3b3b3;
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  background: $primary-article-color;
+
+  border-radius: 8px;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  height: 75vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.allBtn,
+.musicBtn,
+.podcastsBtn {
+  background: $primary-bg-color;
+
+  padding: 0.5rem;
+  border-radius: 60px;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.allBtn {
+  background: $primary-text-color;
+  color: $black-text-color;
+}
+
+.horizontalDivider {
+  width: 100%;
+  border-top: 1px solid $black-text-color;
+}
+
+.socialLinksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+}
+
+.socialLink {
+  background: $primary-bg-color;
+
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.socialLink > svg {
+  color: $primary-text-color;
+}
+
+.copyrightLogo {
+  color: $spotify-color;
+
+  font-size: 0.9rem;
+}
