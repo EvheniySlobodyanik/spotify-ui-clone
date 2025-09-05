@@ -14,11 +14,65 @@ import styles from "./Footer.module.scss";
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <div></div>
+      <div className={styles.leftContainer}></div>
 
-      <div></div>
+      <div className={styles.centerContainer}>
+        <div className={styles.centerTopContainer}>
+          <button type="button" className={styles.mixBtn}>
+            <MixIcon />
+          </button>
 
-      <div></div>
+          <button type="button" className={styles.skipBackBtn}>
+            <SkipBackIcon />
+          </button>
+
+          <button type="button" className={styles.pauseBtn}>
+            <PauseIcon />
+          </button>
+
+          <button type="button" className={styles.skipForwardBtn}>
+            <SkipForwardIcon />
+          </button>
+
+          <button type="button" className={styles.repeatBtn}>
+            <RepeatIcon />
+          </button>
+        </div>
+
+        <div className={styles.centerBottomContainer}>
+          <span className={styles.leftTimer}>-:--</span>
+
+          <input type="range" className={styles.inputSongDuration} />
+
+          <span className={styles.rightTimer}>-:--</span>
+        </div>
+      </div>
+
+      <div className={styles.rightContainer}>
+        <button type="button" className={styles.squareBtn}>
+          <SquareIcon />
+        </button>
+
+        <button type="button">
+          <QueueIcon className={styles.queueBtn} />
+        </button>
+
+        <button type="button" className={styles.connectDeviceBtn}>
+          <ConnectDeviceIcon />
+        </button>
+
+        <div className={styles.soundContainer}>
+          <button type="button" className={styles.soundBtn}>
+            <SoundIcon />
+          </button>
+
+          <input type="range" className={styles.inputSoundChanger} />
+        </div>
+
+        <button type="button" className={styles.fullscreenBtn}>
+          <FullscreenIcon />
+        </button>
+      </div>
     </footer>
   );
 }
