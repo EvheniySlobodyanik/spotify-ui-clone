@@ -1,0 +1,128 @@
+$primary-bg-color: #121212;
+$primary-button-color: #2a2a2a;
+$primary-article-color: #242424;
+$primary-text-color: #fff;
+$black-text-color: #000;
+$spotify-color: #b3b3b3;
+
+.mixBtn,
+.skipBackBtn,
+.pauseBtn,
+.skipForwardBtn,
+.repeatBtn,
+.squareBtn,
+.queueBtn,
+.connectDeviceBtn,
+.soundBtn,
+.fullscreenBtn {
+  padding: 0.5rem;
+  border-radius: 50%;
+
+  &:focus {
+    border: 1px solid $primary-text-color;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+
+  padding: 0.75rem 0.5rem;
+}
+
+.leftContainer {
+  flex: 0 0 20%;
+}
+
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.centerTopContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pauseBtn {
+  color: $black-text-color;
+}
+
+.centerBottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.leftTimer,
+.rightTimer {
+  font-size: 0.8rem;
+}
+
+.inputSongDuration {
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+
+  background-color: $spotify-color;
+
+  border-radius: 8px;
+  height: 0.2rem;
+  width: 55%;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+
+  flex: 0 0 20%;
+}
+
+.soundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.25rem;
+}
+
+.inputSoundChanger {
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+  }
+
+  background-color: $primary-text-color;
+
+  border-radius: 8px;
+  height: 0.25rem;
+  max-width: 60%;
+}

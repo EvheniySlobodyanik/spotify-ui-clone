@@ -18,23 +18,23 @@ export function Footer() {
 
       <div className={styles.centerContainer}>
         <div className={styles.centerTopContainer}>
-          <button type="button" className={styles.mixBtn}>
+          <button type="button" className={styles.mixBtn} disabled>
             <MixIcon />
           </button>
 
-          <button type="button" className={styles.skipBackBtn}>
+          <button type="button" className={styles.skipBackBtn} disabled>
             <SkipBackIcon />
           </button>
 
-          <button type="button" className={styles.pauseBtn}>
+          <button type="button" className={styles.pauseBtn} disabled>
             <PauseIcon />
           </button>
 
-          <button type="button" className={styles.skipForwardBtn}>
+          <button type="button" className={styles.skipForwardBtn} disabled>
             <SkipForwardIcon />
           </button>
 
-          <button type="button" className={styles.repeatBtn}>
+          <button type="button" className={styles.repeatBtn} disabled>
             <RepeatIcon />
           </button>
         </div>
@@ -42,14 +42,14 @@ export function Footer() {
         <div className={styles.centerBottomContainer}>
           <span className={styles.leftTimer}>-:--</span>
 
-          <input type="range" className={styles.inputSongDuration} />
+          <input type="range" className={styles.inputSongDuration} disabled />
 
           <span className={styles.rightTimer}>-:--</span>
         </div>
       </div>
 
       <div className={styles.rightContainer}>
-        <button type="button" className={styles.squareBtn}>
+        <button type="button" className={styles.squareBtn} disabled>
           <SquareIcon />
         </button>
 
@@ -69,7 +69,7 @@ export function Footer() {
           <input type="range" className={styles.inputSoundChanger} />
         </div>
 
-        <button type="button" className={styles.fullscreenBtn}>
+        <button type="button" className={styles.fullscreenBtn} disabled>
           <FullscreenIcon />
         </button>
       </div>
