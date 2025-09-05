@@ -4,18 +4,21 @@ import styles from "./Sidebar.module.scss";
 
 export function Sidebar() {
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.sidebar} aria-label="Your library sidebar">
       <div className={styles.header}>
-        <h1 className={styles.heading}>Your Library</h1>
+        <h2 className={styles.heading}>Your Library</h2>
 
         <button type="button" className={styles.createBtn}>
-          <PlusIcon />
+          <PlusIcon aria-hidden="true" />
           Create
         </button>
       </div>
 
-      <article className={styles.playlistArticle}>
-        <h2 className={styles.playlistHeading}>Create your first playlist</h2>
+      <article
+        className={styles.playlistArticle}
+        aria-labelledby="playlist-heading"
+      >
+        <h3 className={styles.playlistHeading}>Create your first playlist</h3>
         <p className={styles.playlistPara}>It's easy, we'll help you</p>
 
         <button type="button" className={styles.playlistBtn}>
@@ -23,10 +26,13 @@ export function Sidebar() {
         </button>
       </article>
 
-      <article className={styles.podcastsArticle}>
-        <h2 className={styles.podcastsHeading}>
+      <article
+        className={styles.podcastsArticle}
+        aria-labelledby="podcasts-heading"
+      >
+        <h3 className={styles.podcastsHeading}>
           Let's find some podcasts to follow
-        </h2>
+        </h3>
         <p className={styles.podcastsPara}>
           We'll keep you updated on new episodes
         </p>
