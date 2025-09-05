@@ -73,7 +73,9 @@ export function Footer() {
           role="group"
           aria-label="Song progress"
         >
-          <span className={styles.leftTimer}>-:--</span>
+          <span className={styles.leftTimer} aria-label="Elapsed time">
+            -:--
+          </span>
 
           <input
             type="range"
@@ -82,7 +84,9 @@ export function Footer() {
             disabled
           />
 
-          <span className={styles.rightTimer}>-:--</span>
+          <span className={styles.rightTimer} aria-label="Total time">
+            -:--
+          </span>
         </div>
       </div>
 
@@ -108,7 +112,11 @@ export function Footer() {
           <ConnectDeviceIcon aria-hidden="true" />
         </button>
 
-        <div className={styles.soundContainer} aria-label="Volume controls">
+        <div
+          className={styles.soundContainer}
+          role="group"
+          aria-label="Volume controls"
+        >
           <button
             type="button"
             className={styles.soundBtn}
