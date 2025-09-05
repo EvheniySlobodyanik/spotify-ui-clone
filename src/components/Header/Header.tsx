@@ -16,57 +16,92 @@ export function Header() {
       <a
         href="https://open.spotify.com/"
         className={styles.spotifyLink}
+        aria-label="Open Spotify homepage"
         tabIndex={-1}
       >
-        <SpotifyIcon />
+        <SpotifyIcon aria-hidden="true" />
       </a>
 
-      <button type="button" className={styles.homeBtn}>
-        <HomeIcon />
+      <button type="button" className={styles.homeBtn} aria-label="Home">
+        <HomeIcon aria-hidden="true" />
       </button>
 
-      <nav className={styles.navBar}>
+      <nav className={styles.navBar} aria-label="Main navigation">
         <div className={styles.optionsContainer}>
-          <button type="button" className={styles.searchBtn} tabIndex={-1}>
-            <SearchIcon />
+          <button
+            type="button"
+            className={styles.searchBtn}
+            aria-label="Search"
+            tabIndex={-1}
+          >
+            <SearchIcon aria-hidden="true" />
           </button>
 
           <input
             type="text"
             className={styles.searchInput}
             placeholder="What do you want to play?"
+            aria-label="Search input"
           />
 
           <div className={styles.divider} />
 
-          <button type="button" className={styles.browseBtn}>
-            <BrowseIcon />
+          <button
+            type="button"
+            className={styles.browseBtn}
+            aria-label="Browse"
+          >
+            <BrowseIcon aria-hidden="true" />
           </button>
         </div>
       </nav>
 
-      <div className={styles.otherOptionsContainer}>
-        <button type="button" className={styles.premiumBtn}>
+      <div
+        className={styles.otherOptionsContainer}
+        role="group"
+        aria-label="User options"
+      >
+        <button
+          type="button"
+          className={styles.premiumBtn}
+          aria-label="Explore Premium"
+        >
           Explore Premium
         </button>
 
-        <button type="button" className={styles.downloadBtn}>
-          <DownloadIcon />
+        <button
+          type="button"
+          className={styles.downloadBtn}
+          aria-label="Install App"
+        >
+          <DownloadIcon aria-hidden="true" />
           Install App
         </button>
 
-        <button type="button" className={styles.notificationBtn}>
-          <BellIcon />
+        <button
+          type="button"
+          className={styles.notificationBtn}
+          aria-label="Notifications"
+        >
+          <BellIcon aria-hidden="true" />
         </button>
 
-        <button type="button" className={styles.friendsBtn}>
-          <FriendsIcon />
+        <button
+          type="button"
+          className={styles.friendsBtn}
+          aria-label="Friends activity"
+        >
+          <FriendsIcon aria-hidden="true" />
         </button>
 
-        <button type="button" className={styles.profileBtn}>
+        <button
+          type="button"
+          className={styles.profileBtn}
+          aria-label="Open profile menu"
+        >
           <img
             src={ProfilePic}
-            alt="profile picture"
+            alt="Your profile picture"
             className={styles.profilePic}
           />
         </button>
