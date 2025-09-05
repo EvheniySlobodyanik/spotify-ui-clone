@@ -27,6 +27,15 @@ const headings = [
   "Shows to try",
 ];
 
+const documentLinks = [
+  "Legal",
+  "Safety & Privacy Center",
+  "Privacy Policy",
+  "Cookies",
+  "About Ads",
+  "Accessibility",
+];
+
 export function Main() {
   return (
     <main className={styles.main}>
@@ -74,17 +83,11 @@ export function Main() {
 
       <div className={styles.rightsContainer}>
         <address className={styles.documentsLinksContainer}>
-          <a className={styles.documentLink}></a>
-
-          <a className={styles.documentLink}></a>
-
-          <a className={styles.documentLink}></a>
-
-          <a className={styles.documentLink}></a>
-
-          <a className={styles.documentLink}></a>
-
-          <a className={styles.documentLink}></a>
+          {documentLinks.map((docLink, index) => (
+            <a key={index} className={styles.documentLink}>
+              {docLink}
+            </a>
+          ))}
         </address>
 
         <p className={styles.copyrightLogo}>© 2025 Spotify AB</p>
