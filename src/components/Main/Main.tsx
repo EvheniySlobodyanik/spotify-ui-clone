@@ -27,33 +27,6 @@ const headings = [
   "Shows to try",
 ];
 
-const documentLinks = [
-  {
-    heading: "Legal",
-    link: "https://www.spotify.com/ua-en/legal/end-user-agreement/",
-  },
-  {
-    heading: "Safety & Privacy Center",
-    link: "https://www.spotify.com/ua-en/safetyandprivacy",
-  },
-  {
-    heading: "Privacy Policy",
-    link: "https://www.spotify.com/ua-en/legal/privacy-policy/",
-  },
-  {
-    heading: "Cookies",
-    link: "https://www.spotify.com/ua-en/legal/cookies-policy/",
-  },
-  {
-    heading: "About Ads",
-    link: "https://www.spotify.com/ua-en/legal/privacy-policy/#s3",
-  },
-  {
-    heading: "Accessibility",
-    link: "https://www.spotify.com/ua-en/accessibility",
-  },
-];
-
 const sections = [
   {
     heading: "Company",
@@ -109,6 +82,48 @@ const sections = [
   },
 ];
 
+const socialLinks = [
+  {
+    icon: <InstagramIcon />,
+    href: "https://instagram.com/spotify",
+  },
+  {
+    icon: <TwitterIcon />,
+    href: "https://twitter.com/spotify",
+  },
+  {
+    icon: <FacebookIcon />,
+    href: "https://facebook.com/spotify",
+  },
+];
+
+const documentLinks = [
+  {
+    heading: "Legal",
+    link: "https://www.spotify.com/ua-en/legal/end-user-agreement/",
+  },
+  {
+    heading: "Safety & Privacy Center",
+    link: "https://www.spotify.com/ua-en/safetyandprivacy",
+  },
+  {
+    heading: "Privacy Policy",
+    link: "https://www.spotify.com/ua-en/legal/privacy-policy/",
+  },
+  {
+    heading: "Cookies",
+    link: "https://www.spotify.com/ua-en/legal/cookies-policy/",
+  },
+  {
+    heading: "About Ads",
+    link: "https://www.spotify.com/ua-en/legal/privacy-policy/#s3",
+  },
+  {
+    heading: "Accessibility",
+    link: "https://www.spotify.com/ua-en/accessibility",
+  },
+];
+
 export function Main() {
   return (
     <main className={styles.main}>
@@ -155,17 +170,17 @@ export function Main() {
         </div>
 
         <address className={styles.socialLinksContainer}>
-          <a className={styles.socialLink}>
-            <InstagramIcon />
-          </a>
-
-          <a className={styles.socialLink}>
-            <TwitterIcon />
-          </a>
-
-          <a className={styles.socialLink}>
-            <FacebookIcon />
-          </a>
+          {socialLinks.map((social, i) => (
+            <a
+              key={i}
+              className={styles.socialLink}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {social.icon}
+            </a>
+          ))}
         </address>
       </nav>
 
