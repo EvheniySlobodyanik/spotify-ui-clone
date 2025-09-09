@@ -58,10 +58,22 @@ const sections = [
   {
     heading: "Company",
     items: ["About", "Jobs", "For the Record"],
+    links: [
+      "https://www.spotify.com/ua-en/about-us/contact/",
+      "https://www.lifeatspotify.com/",
+      "https://newsroom.spotify.com/",
+    ],
   },
   {
     heading: "Communities",
     items: ["For Artists", "Developers", "Advertising", "Investors", "Vendors"],
+    links: [
+      "https://artists.spotify.com/home",
+      "https://developer.spotify.com/",
+      "https://ads.spotify.com/en-US/",
+      "https://investors.spotify.com/home/default.aspx",
+      "https://spotifyforvendors.com/",
+    ],
   },
   {
     heading: "Useful links",
@@ -70,6 +82,12 @@ const sections = [
       "Free Mobile App",
       "Popular by Country",
       "Import your music",
+    ],
+    links: [
+      "https://support.spotify.com/ua-en/",
+      "https://www.spotify.com/ua-en/download/windows/",
+      "https://open.spotify.com/popular-in/ua",
+      "https://www.spotify.com/ua-en/import-music/",
     ],
   },
   {
@@ -80,6 +98,13 @@ const sections = [
       "Premium Family",
       "Premium Student",
       "Spotify Free",
+    ],
+    links: [
+      "https://www.spotify.com/ua-en/premium/#ref=spotifycom_footer_premium_individual",
+      "https://www.spotify.com/ua-en/duo/#ref=spotifycom_footer_premium_duo",
+      "https://www.spotify.com/ua-en/family/#ref=spotifycom_footer_premium_family",
+      "https://www.spotify.com/ua-en/student/#ref=spotifycom_footer_premium_student",
+      "https://www.spotify.com/ua-en/free/#ref=spotifycom_footer_free",
     ],
   },
 ];
@@ -112,9 +137,16 @@ export function Main() {
               </h3>
 
               <ul className={styles.navList}>
-                {section.items.map((item) => (
+                {section.items.map((item, i) => (
                   <li key={item} className={styles.navListItem}>
-                    <a className={styles.listItemLink}>{item}</a>
+                    <a
+                      className={styles.listItemLink}
+                      href={section.links[i]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item}
+                    </a>
                   </li>
                 ))}
               </ul>
