@@ -28,12 +28,30 @@ const headings = [
 ];
 
 const documentLinks = [
-  "Legal",
-  "Safety & Privacy Center",
-  "Privacy Policy",
-  "Cookies",
-  "About Ads",
-  "Accessibility",
+  {
+    heading: "Legal",
+    link: "https://www.spotify.com/ua-en/legal/end-user-agreement/",
+  },
+  {
+    heading: "Safety & Privacy Center",
+    link: "https://www.spotify.com/ua-en/safetyandprivacy",
+  },
+  {
+    heading: "Privacy Policy",
+    link: "https://www.spotify.com/ua-en/legal/privacy-policy/",
+  },
+  {
+    heading: "Cookies",
+    link: "https://www.spotify.com/ua-en/legal/cookies-policy/",
+  },
+  {
+    heading: "About Ads",
+    link: "https://www.spotify.com/ua-en/legal/privacy-policy/#s3",
+  },
+  {
+    heading: "Accessibility",
+    link: "https://www.spotify.com/ua-en/accessibility",
+  },
 ];
 
 const sections = [
@@ -122,13 +140,19 @@ export function Main() {
       <div className={styles.horizontalDivider} />
 
       <div className={styles.rightsContainer}>
-        <address className={styles.documentsLinksContainer}>
-          {documentLinks.map((docLink, index) => (
-            <a key={index} className={styles.documentLink}>
-              {docLink}
+        <nav className={styles.documentsLinksContainer}>
+          {documentLinks.map((docLink) => (
+            <a
+              key={docLink.heading}
+              href={docLink.link}
+              className={styles.documentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {docLink.heading}
             </a>
           ))}
-        </address>
+        </nav>
 
         <p className={styles.copyrightLogo}>© 2025 Spotify AB</p>
       </div>
