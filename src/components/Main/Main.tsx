@@ -36,6 +36,36 @@ const documentLinks = [
   "Accessibility",
 ];
 
+const sections = [
+  {
+    heading: "Company",
+    items: ["About", "Jobs", "For the Record"],
+  },
+  {
+    heading: "Communities",
+    items: ["For Artists", "Developers", "Advertising", "Investors", "Vendors"],
+  },
+  {
+    heading: "Useful links",
+    items: [
+      "Support",
+      "Free Mobile App",
+      "Popular by Country",
+      "Import your music",
+    ],
+  },
+  {
+    heading: "Spotify Plans",
+    items: [
+      "Premium Individual",
+      "Premium Duo",
+      "Premium Family",
+      "Premium Student",
+      "Spotify Free",
+    ],
+  },
+];
+
 export function Main() {
   return (
     <main className={styles.main}>
@@ -55,14 +85,24 @@ export function Main() {
 
       <div className={styles.horizontalDivider} />
 
-      <div className={styles.footerContainer}>
-        <ul className={styles.list}></ul>
+      <nav className={styles.beneficialLinksNav}>
+        <div className={styles.navListsContainer}>
+          {sections.map((section) => (
+            <div className={styles.navContainer}>
+              <h3 key={section.heading} className={styles.navHeading}>
+                {section.heading}
+              </h3>
 
-        <ul className={styles.list}></ul>
-
-        <ul className={styles.list}></ul>
-
-        <ul className={styles.list}></ul>
+              <ul className={styles.navList}>
+                {section.items.map((item) => (
+                  <li key={item} className={styles.navListItem}>
+                    <a className={styles.listItemLink}>{item}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
         <address className={styles.socialLinksContainer}>
           <a className={styles.socialLink}>
@@ -77,7 +117,7 @@ export function Main() {
             <FacebookIcon />
           </a>
         </address>
-      </div>
+      </nav>
 
       <div className={styles.horizontalDivider} />
 

@@ -8,6 +8,7 @@ $spotify-color: #b3b3b3;
 .main {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 
   background: $primary-article-color;
 
@@ -46,10 +47,57 @@ $spotify-color: #b3b3b3;
   border-top: 1px solid $black-text-color;
 }
 
+.beneficialLinksNav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 2rem 0rem 1rem 0rem;
+}
+
+.navListsContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 3rem;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.navHeading {
+  font-size: 1rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  gap: 0.75rem;
+  min-width: 9rem;
+}
+
+.navListItem {
+  color: $spotify-color;
+
+  font-size: 0.9rem;
+}
+
+.listItemLink:hover {
+  color: $primary-text-color;
+
+  text-decoration: underline;
+}
+
 .socialLinksContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 
   gap: 0.5rem;
 }
@@ -80,7 +128,7 @@ $spotify-color: #b3b3b3;
   font-style: normal;
   font-size: 0.9rem;
 
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .documentLink:hover {
